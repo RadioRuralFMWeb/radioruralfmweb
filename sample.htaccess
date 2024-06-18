@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  RewriteRule ^a-radio$ /a-radio.php [NC,L]
+  RewriteRule ^blog$ /blog.php [NC,L]
+  RewriteRule ^programacao$ /programacao.php [NC,L]
+  RewriteRule ^equipe$ /equipe.php [NC,L]
+  RewriteRule ^galeria$ /galeria.php [NC,L]
+  RewriteRule ^contato$ /contato.php [NC,L]
+  
+  RewriteRule ^blog-page-([^-]*)$ blog.php?page=$1                            
+  RewriteRule ^blog-([^-]*)+? blog.php?d=$1 [L]
+</IfModule>
+
+ErrorDocument 404 /404.php
